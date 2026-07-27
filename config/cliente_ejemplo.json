@@ -1,0 +1,22 @@
+{
+  "nombre_cliente": "Cliente Ejemplo",
+  "titulo_hero": "Convertí tu conocimiento en ingresos reales",
+  "subtitulo_hero": "El sistema paso a paso para lanzar tu infoproducto en 30 días",
+  "cta_texto": "Quiero empezar ahora",
+  "beneficios": [
+    "Aprendé a estructurar tu oferta sin perder meses probando",
+    "Plantillas listas para usar desde el día uno",
+    "Soporte directo para resolver tus dudas"
+  ],
+  "testimonios": [
+    { "nombre": "Julia R.", "texto": "En 3 semanas lancé mi primer curso y ya recuperé la inversión." },
+    { "nombre": "Martín G.", "texto": "Me ordenó la cabeza. Pasé de tener ideas sueltas a un producto real." }
+  ],
+  "faq": [
+    { "pregunta": "¿Necesito experiencia previa?", "respuesta": "No, el sistema está pensado para arrancar de cero." },
+    { "pregunta": "¿Cuánto tiempo me va a llevar?", "respuesta": "Entre 2 y 4 semanas si le dedicás unas horas por semana." },
+    { "pregunta": "¿Qué pasa si no me sirve?", "respuesta": "Tenés soporte directo para resolver dudas durante todo el proceso." }
+  ],
+  "precio": "97 USD",
+  "whatsapp_link": "https://wa.me/5491100000000"
+}

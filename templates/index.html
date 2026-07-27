@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ config.nombre_cliente }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <section class="hero">
+        <h1>{{ config.titulo_hero }}</h1>
+        <p>{{ config.subtitulo_hero }}</p>
+        <a href="#lead-form" class="btn-cta">{{ config.cta_texto }}</a>
+    </section>
+
+    <section class="beneficios">
+        <h2>Lo que vas a lograr</h2>
+        <ul>
+            {% for beneficio in config.beneficios %}
+            <li>{{ beneficio }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="testimonios">
+        <h2>Lo que dicen quienes ya lo hicieron</h2>
+        <div class="testimonios-grid">
+            {% for t in config.testimonios %}
+            <div class="testimonio-card">
+                <p class="testimonio-texto">"{{ t.texto }}"</p>
+                <p class="testimonio-nombre">— {{ t.nombre }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="oferta">
+        <h2>Precio de lanzamiento</h2>
+        <p class="precio">{{ config.precio }}</p>
+        <a href="#lead-form" class="btn-cta">{{ config.cta_texto }}</a>
+    </section>
+
+    <section class="faq">
+        <h2>Preguntas frecuentes</h2>
+        {% for item in config.faq %}
+        <div class="faq-item">
+            <p class="faq-pregunta">{{ item.pregunta }}</p>
+            <p class="faq-respuesta">{{ item.respuesta }}</p>
+        </div>
+        {% endfor %}
+    </section>
+
+    <section class="lead-form" id="lead-form">
+        <h2>Dejanos tus datos y te contactamos</h2>
+        <form action="/enviar-lead" method="POST">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu email" required>
+            <input type="text" name="whatsapp" placeholder="Tu WhatsApp" required>
+            <button type="submit" class="btn-cta">{{ config.cta_texto }}</button>
+        </form>
+    </section>
+
+    <!-- Botón flotante de

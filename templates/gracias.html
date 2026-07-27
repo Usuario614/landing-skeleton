@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias - {{ config.nombre_cliente }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <section class="gracias">
+        <h1>¡Gracias por tu interés!</h1>
+        <p>Ya recibimos tus datos. Si querés hablar ahora mismo, escribinos por WhatsApp:</p>
+        <a href="{{ config.whatsapp_link }}" class="btn-cta" target="_blank">Escribir por WhatsApp</a>
+    </section>
+</body>
+</html>
