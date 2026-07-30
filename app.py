@@ -9,8 +9,8 @@ app = Flask(__name__)
 # Cambiá esta variable para apuntar al cliente que estés armando
 CLIENTE_ACTUAL = "cliente_ejemplo"
 
-# URL del webhook de n8n (producción)
-N8N_WEBHOOK_URL = "http://localhost:5678/webhook/35a29b1f-8cbb-409f-b58f-df8428191699"
+# URL del webhook de n8n (túnel público vía ngrok)
+N8N_WEBHOOK_URL = "https://unusable-pasta-hunchback.ngrok-free.dev/webhook/35a29b1f-8cbb-409f-b58f-df8428191699"
 
 def cargar_config(nombre_cliente):
     ruta = os.path.join("config", f"{nombre_cliente}.json")
